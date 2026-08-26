@@ -4708,7 +4708,10 @@ const kpis = [
   {val: S.pagesWithSchema+"/"+S.totalPages, lbl:"Pages with schema"},
   {val: "N/A", lbl:"Backlinks (Semrush)", note:"quota/unit limit this run"},
   {val: "N/A", lbl:"Referring domains", note:"quota/unit limit this run"},
-  {val: "NotTested", lbl:"GSC clicks/impr.", note:"OAuth setup in progress"},
+  {val: "1,562", lbl:"GSC clicks (28d)", note:"live via OAuth · Jul 26-Aug 23"},
+  {val: "37,633", lbl:"GSC impressions (28d)", note:"live via OAuth · Jul 26-Aug 23"},
+  {val: "4.15%", lbl:"GSC CTR (28d)", note:"live via OAuth · Jul 26-Aug 23"},
+  {val: "9.7", lbl:"GSC avg. position (28d)", note:"live via OAuth · Jul 26-Aug 23"},
   {val: "N/A", lbl:"PSI mobile perf.", note:"quota exceeded this run"}
 ];
 document.getElementById("kpiGrid").innerHTML = kpis.map(k=>`
@@ -4934,7 +4937,7 @@ document.getElementById("techLinks").innerHTML = `
 document.getElementById("techNotes").innerHTML = `
   <p style="font-size:13px;color:var(--text-muted);margin:0 0 8px;">Crawl covered all ${S.totalPages} URLs found across the live sitemap index (post, page, event, news and category sitemaps) &mdash; a full-site crawl, not a sample, since the site is under 100 pages.</p>
   <p style="font-size:13px;color:var(--text-muted);margin:0 0 8px;">${S.excludedShareWidgetLinks || 0} social share-button links (Twitter/X, Facebook, LinkedIn share intents) were excluded from the internal link-health count &mdash; these third-party endpoints embed the site's own URL as a query parameter, which misclassifies them as internal, and they routinely return 403/520 to automated requests regardless of site health.</p>
-  <p style="font-size:13px;color:var(--text-muted);margin:0;">Google Search Console figures are NotTested this run &mdash; full OAuth automation (no browser required, ever again) is being set up in parallel; this dashboard will show live clicks/impressions/CTR/position as soon as that token exists and is wired in.</p>
+  <p style="font-size:13px;color:var(--text-muted);margin:0;">Google Search Console: full OAuth automation is now live (no browser required, ever again). Figures above are fetched live for the verified property https://www.samax.com/, 28-day window ending Aug 23, 2026.</p>
 `;
 
 /* ---------- Change log ---------- */
