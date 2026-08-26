@@ -4678,9 +4678,9 @@ function renderCalcModal(){
   for (const k in CAT_LABELS){
     const [label,max] = CAT_LABELS[k];
     const val = S.categories[k];
-    html += `<div class="calc-row"><span class="cname">${label} (max ${max})</span><span class="cval">${val}</span></div>`;
+    html += `<div class="calc-row"><span class="cname">${label}</span><span class="cval tabular">${val}/${max}</span></div>`;
   }
-  html += `<div class="calc-total"><span>Total</span><span class="tabular">${S.totalPoints} / 125 &rarr; ${S.scorePct}%</span></div>`;
+  html += `<div class="calc-total"><span>Total</span><span class="tabular">${S.totalPoints}/125 &rarr; ${S.scorePct}%</span></div>`;
   html += `<p style="font-size:11.5px;color:var(--text-muted);margin-top:14px;">Category 9 (page speed) requires a live PageSpeed Insights fetch. This run, PSI's public endpoint returned a daily quota error (HTTP 429, quota_limit_value 0) from this environment for every sampled page &mdash; it scored 0 of 15 rather than being estimated. Search Console clicks/impressions/CTR/position are shown as context elsewhere and are deliberately excluded from this score.</p>`;
   body.innerHTML = html;
 }
