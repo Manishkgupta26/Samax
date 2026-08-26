@@ -121,6 +121,11 @@
   }
   nav.tabs button:hover{color:var(--text);}
   nav.tabs button.active{color:var(--text);border-bottom-color:var(--teal);font-weight:600;}
+  nav.tabs .tab-score{
+    display:inline-block;margin-left:6px;padding:1px 6px;border-radius:999px;
+    background:var(--teal);color:var(--charcoal);font-size:11px;font-weight:700;
+    font-family:var(--font-mono, monospace);vertical-align:1px;
+  }
   nav.tabs button:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
 
   main{max-width:1200px;margin:0 auto;padding:28px 24px 60px;}
@@ -282,9 +287,9 @@
 
 <nav class="tabs" id="tabNav">
   <button data-tab="overview" class="active">Overview</button>
-  <button data-tab="seo">SEO</button>
-  <button data-tab="aeo">AEO</button>
-  <button data-tab="geo">GEO</button>
+  <button data-tab="seo">SEO <span class="tab-score" id="tabScoreSeo"></span></button>
+  <button data-tab="aeo">AEO <span class="tab-score" id="tabScoreAeo"></span></button>
+  <button data-tab="geo">GEO <span class="tab-score" id="tabScoreGeo"></span></button>
   <button data-tab="pages">Pages</button>
   <button data-tab="pagespeed">Page Speed</button>
   <button data-tab="technical">Technical</button>
@@ -457,8 +462,8 @@ const DATA = {
 
                  ],
     "externalDomainCount":  24,
-    "psiAvailable":  false,
-    "psiSampleCount":  0,
+    "psiAvailable":  true,
+    "psiSampleCount":  2,
     "categories":  {
                        "cat1_crawlability":  20,
                        "cat2_https_viewport":  15,
@@ -468,11 +473,11 @@ const DATA = {
                        "cat6_title_meta":  6.54,
                        "cat7_schema":  8.62,
                        "cat8_security":  10,
-                       "cat9_pagespeed":  0
+                       "cat9_pagespeed":  14.7
                    },
-    "totalPoints":  97.98,
-    "scorePct":  78,
-    "band":  "Good"
+    "totalPoints":  112.68,
+    "scorePct":  90,
+    "band":  "Excellent"
 }
 ,
   pages: [
@@ -4034,62 +4039,62 @@ const DATA = {
     {
         "page":  "https://www.samax.com/",
         "strategy":  "mobile",
-        "ok":  false,
-        "performance":  null,
-        "accessibility":  null,
-        "bestPractices":  null,
-        "seo":  null,
-        "fcp":  null,
-        "lcp":  null,
-        "tbt":  null,
-        "cls":  null,
-        "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "ok":  true,
+        "performance":  99,
+        "accessibility":  81,
+        "bestPractices":  92,
+        "seo":  92,
+        "fcp":  "1.2 s",
+        "lcp":  "1.2 s",
+        "tbt":  "130 ms",
+        "cls":  "0",
+        "si":  "1.9 s",
+        "source": "live retry via PageSpeed Insights web UI (browser), not the REST API"
     },
     {
         "page":  "https://www.samax.com/",
         "strategy":  "desktop",
-        "ok":  false,
-        "performance":  null,
-        "accessibility":  null,
-        "bestPractices":  null,
-        "seo":  null,
-        "fcp":  null,
-        "lcp":  null,
-        "tbt":  null,
-        "cls":  null,
-        "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "ok":  true,
+        "performance":  98,
+        "accessibility":  81,
+        "bestPractices":  96,
+        "seo":  92,
+        "fcp":  "0.8 s",
+        "lcp":  "0.8 s",
+        "tbt":  "0 ms",
+        "cls":  "0.008",
+        "si":  "1.4 s",
+        "source": "live retry via PageSpeed Insights web UI (browser), not the REST API"
     },
     {
         "page":  "https://www.samax.com/tailored-data-plans/",
         "strategy":  "mobile",
-        "ok":  false,
-        "performance":  null,
-        "accessibility":  null,
-        "bestPractices":  null,
-        "seo":  null,
-        "fcp":  null,
-        "lcp":  null,
-        "tbt":  null,
-        "cls":  null,
-        "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "ok":  true,
+        "performance":  97,
+        "accessibility":  81,
+        "bestPractices":  100,
+        "seo":  100,
+        "fcp":  "1.3 s",
+        "lcp":  "1.4 s",
+        "tbt":  "120 ms",
+        "cls":  "0",
+        "si":  "3.9 s",
+        "source": "live retry via PageSpeed Insights web UI (browser), not the REST API"
     },
     {
         "page":  "https://www.samax.com/tailored-data-plans/",
         "strategy":  "desktop",
-        "ok":  false,
-        "performance":  null,
-        "accessibility":  null,
-        "bestPractices":  null,
-        "seo":  null,
-        "fcp":  null,
-        "lcp":  null,
-        "tbt":  null,
-        "cls":  null,
-        "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "ok":  true,
+        "performance":  96,
+        "accessibility":  81,
+        "bestPractices":  100,
+        "seo":  100,
+        "fcp":  "0.3 s",
+        "lcp":  "1.1 s",
+        "tbt":  "20 ms",
+        "cls":  "0",
+        "si":  "1.5 s",
+        "source": "live retry via PageSpeed Insights web UI (browser), not the REST API"
     },
     {
         "page":  "https://www.samax.com/hardware-accessories/",
@@ -4104,7 +4109,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests; live browser retry via the PageSpeed Insights web UI also hung on \"Running analysis\" for over 2 minutes with no error and no result -- likely the same backend rate limit, or this page's 64 images made the live Lighthouse run time out server-side."
     },
     {
         "page":  "https://www.samax.com/hardware-accessories/",
@@ -4119,7 +4124,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests; live browser retry via the PageSpeed Insights web UI also hung on \"Running analysis\" for over 2 minutes with no error and no result -- likely the same backend rate limit, or this page's 64 images made the live Lighthouse run time out server-side."
     },
     {
         "page":  "https://www.samax.com/solutions/",
@@ -4134,7 +4139,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests; live browser retry via the PageSpeed Insights web UI also hung on \"Running analysis\" for over 90 seconds with no error and no result after 2 prior successful runs in the same session -- consistent with a shared backend rate limit kicking in after a couple of live runs."
     },
     {
         "page":  "https://www.samax.com/solutions/",
@@ -4149,7 +4154,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests; live browser retry via the PageSpeed Insights web UI also hung on \"Running analysis\" for over 90 seconds with no error and no result after 2 prior successful runs in the same session -- consistent with a shared backend rate limit kicking in after a couple of live runs."
     },
     {
         "page":  "https://www.samax.com/solutions/starlink-reseller-kuwait/",
@@ -4164,7 +4169,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests this run. Not yet retried live via the browser -- after 2 successful live checks and 2 hung attempts this session, further live retries were paused rather than risk more inconclusive multi-minute hangs; retry on the next refresh."
     },
     {
         "page":  "https://www.samax.com/solutions/starlink-reseller-kuwait/",
@@ -4179,7 +4184,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests this run. Not yet retried live via the browser -- after 2 successful live checks and 2 hung attempts this session, further live retries were paused rather than risk more inconclusive multi-minute hangs; retry on the next refresh."
     },
     {
         "page":  "https://www.samax.com/sama-x-managed-sd-wan/",
@@ -4194,7 +4199,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests this run. Not yet retried live via the browser -- after 2 successful live checks and 2 hung attempts this session, further live retries were paused rather than risk more inconclusive multi-minute hangs; retry on the next refresh."
     },
     {
         "page":  "https://www.samax.com/sama-x-managed-sd-wan/",
@@ -4209,7 +4214,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests this run. Not yet retried live via the browser -- after 2 successful live checks and 2 hung attempts this session, further live retries were paused rather than risk more inconclusive multi-minute hangs; retry on the next refresh."
     },
     {
         "page":  "https://www.samax.com/contact-us/",
@@ -4224,7 +4229,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests this run. Not yet retried live via the browser -- after 2 successful live checks and 2 hung attempts this session, further live retries were paused rather than risk more inconclusive multi-minute hangs; retry on the next refresh."
     },
     {
         "page":  "https://www.samax.com/contact-us/",
@@ -4239,7 +4244,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests this run. Not yet retried live via the browser -- after 2 successful live checks and 2 hung attempts this session, further live retries were paused rather than risk more inconclusive multi-minute hangs; retry on the next refresh."
     },
     {
         "page":  "https://www.samax.com/about-us/",
@@ -4254,7 +4259,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests this run. Not yet retried live via the browser -- after 2 successful live checks and 2 hung attempts this session, further live retries were paused rather than risk more inconclusive multi-minute hangs; retry on the next refresh."
     },
     {
         "page":  "https://www.samax.com/about-us/",
@@ -4269,7 +4274,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests this run. Not yet retried live via the browser -- after 2 successful live checks and 2 hung attempts this session, further live retries were paused rather than risk more inconclusive multi-minute hangs; retry on the next refresh."
     },
     {
         "page":  "https://www.samax.com/blog/",
@@ -4284,7 +4289,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests this run. Not yet retried live via the browser -- after 2 successful live checks and 2 hung attempts this session, further live retries were paused rather than risk more inconclusive multi-minute hangs; retry on the next refresh."
     },
     {
         "page":  "https://www.samax.com/blog/",
@@ -4299,7 +4304,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests this run. Not yet retried live via the browser -- after 2 successful live checks and 2 hung attempts this session, further live retries were paused rather than risk more inconclusive multi-minute hangs; retry on the next refresh."
     },
     {
         "page":  "https://www.samax.com/ar/home/",
@@ -4314,7 +4319,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests this run. Not yet retried live via the browser -- after 2 successful live checks and 2 hung attempts this session, further live retries were paused rather than risk more inconclusive multi-minute hangs; retry on the next refresh."
     },
     {
         "page":  "https://www.samax.com/ar/home/",
@@ -4329,7 +4334,7 @@ const DATA = {
         "tbt":  null,
         "cls":  null,
         "si":  null,
-        "error":  "The remote server returned an error: (429) Too Many Requests."
+        "error":  "REST API returned (429) Too Many Requests this run. Not yet retried live via the browser -- after 2 successful live checks and 2 hung attempts this session, further live retries were paused rather than risk more inconclusive multi-minute hangs; retry on the next refresh."
     }
 ]
 ,
@@ -4691,12 +4696,15 @@ const seoScore = Math.round((S.categories.cat1_crawlability + S.categories.cat2_
   S.categories.cat4_image_alt + S.categories.cat5_headings + S.categories.cat6_title_meta + S.categories.cat8_security) /
   (20+15+15+15+10+10+10) * 100);
 // AEO/GEO scores are manual-assessment composites (not mechanically computed from the crawl) -- see AEO/GEO tabs.
-const AEO_SCORE = 62;
-const GEO_SCORE = 71;
+const AEO_SCORE = 66;
+const GEO_SCORE = 75;
 
 document.getElementById("seoScore").textContent = seoScore;
 document.getElementById("aeoScore").textContent = AEO_SCORE;
 document.getElementById("geoScore").textContent = GEO_SCORE;
+document.getElementById("tabScoreSeo").textContent = seoScore + "%";
+document.getElementById("tabScoreAeo").textContent = AEO_SCORE + "%";
+document.getElementById("tabScoreGeo").textContent = GEO_SCORE + "%";
 
 /* ---------- Mini cards + KPI grid (Overview) ---------- */
 function scoreBand(n){ return n>=90?"Excellent":n>=75?"Good":n>=50?"Fair":"Poor"; }
@@ -4731,10 +4739,10 @@ const kpis = [
   {val: S.indexablePages, lbl:"Indexable pages"},
   {val: (S.internalLinksBroken===0? "0" : S.internalLinksBroken), lbl:"Broken internal links"},
   {val: S.pagesWithSchema+"/"+S.totalPages, lbl:"Pages with schema"},
-  {val: "N/A", lbl:"Backlinks (Semrush)", note:"quota/unit limit this run"},
-  {val: "N/A", lbl:"Referring domains", note:"quota/unit limit this run"},
+  {val: "10.6K", lbl:"Backlinks (Semrush)", note:"live, semrush.com"},
+  {val: "1.2K", lbl:"Referring domains", note:"live, semrush.com"},
   ...gscKpis,
-  {val: "N/A", lbl:"PSI mobile perf.", note:"quota exceeded this run"}
+  {val: "98", lbl:"PSI mobile perf.", note:"live avg, 2/10 sampled pages"}
 ];
 document.getElementById("kpiGrid").innerHTML = kpis.map(k=>`
   <div class="kpi"><div class="val tabular">${k.val}</div><div class="lbl">${k.lbl}</div>${k.note?`<div class="note">${k.note}</div>`:""}</div>
@@ -4776,7 +4784,7 @@ const aeoFindings = [
   {status:"Partial", text:"Structured data coverage is inconsistent site-wide: 40 of 94 pages (43%) carry no schema.org markup at all, including most blog posts and news items that would otherwise be strong AI-citation candidates.", pages:["/blog/*","/news/*"]},
   {status:"Partial", text:"Brand-name rendering is inconsistent in visible on-page copy: \"SamaX\", \"Sama-X\", and \"Sama X\" all appear as the rendered brand mention across different pages. AI answer engines resolve brand mentions to a single entity, and mixed forms can dilute that match.", pages:["/","/about-us/","/contact-us/"]},
   {status:"Partial", text:"Product and contact pages sampled (SD-WAN, Contact) have no FAQ or Q&A block, so an answer engine has to extract an answer from prose rather than quoting a ready-made one.", pages:["/sama-x-managed-sd-wan/","/contact-us/"]},
-  {status:"NotTested", text:"Live AI Overview / ChatGPT / Perplexity citation presence for SamaX's own brand and product terms was not checked this run &mdash; that needs a manual prompt-testing pass against each engine, not something the automated crawl or PSI can verify.", pages:["site-wide"]}
+  {status:"Partial", text:"Live AI citation tracking (Semrush AI Search, samax.com): AI Visibility score 22, with 16 tracked mentions across 24 cited pages. Breakdown by engine &mdash; ChatGPT 3 mentions/12 cited pages, Gemini 5/2, AI Mode 8/10, but Google AI Overviews shows 0 mentions across 4 cited pages tracked. AI Overviews is the clear gap to close; ChatGPT and Gemini already surface SamaX for some queries.", pages:["site-wide"]}
 ];
 
 const geoFindings = [
@@ -4785,7 +4793,7 @@ const geoFindings = [
   {status:"Pass", text:"Content depth is consistent: no crawled page came in under 150 words, and the site-wide average is roughly 1,000+ words per page &mdash; enough substance for a generative engine to draw a grounded citation from rather than paraphrasing thin copy.", pages:["site-wide"]},
   {status:"Partial", text:"Arabic-locale coverage is close to parity with English (45 ar/ pages vs 49 non-ar) but not exact &mdash; a handful of utility pages (coming-soon, working-progress) aren't localized, which is low-priority but worth closing for full bilingual GEO coverage.", pages:["/ar/*"]},
   {status:"Partial", text:"Only 57 of 94 pages fall inside the recommended title-length range and 66 of 94 for meta description &mdash; both are among the first signals a generative engine's retrieval step uses to judge topical relevance before it ever reads body copy.", pages:["multiple, see SEO tab"]},
-  {status:"NotTested", text:"Direct testing of whether ChatGPT/Perplexity/Gemini currently cite samax.com for its core terms (\"Starlink reseller Kuwait\", \"managed SD-WAN Middle East\") was not run this cycle &mdash; recommended as a quarterly manual check alongside the AEO citation check above.", pages:["site-wide"]}
+  {status:"Pass", text:"Live SERP data (Semrush) shows AI Overviews already surface samax.com for 4.8% of its ranking keyword positions, against 91.9% classic organic &mdash; a real, measured foothold in AI-generated results rather than a theoretical goal. Kuwait (33 visibility) and Bahrain (23) lead country-level AI visibility, matching the site's strongest local landing pages.", pages:["site-wide"]}
 ];
 
 /* ---------- Chips + finding rendering (shared) ---------- */
@@ -4893,11 +4901,12 @@ renderPages();
 /* ---------- Page Speed tab ---------- */
 (function renderPageSpeed(){
   const banner = document.getElementById("psiBanner");
-  const anyOk = DATA.psi.some(p=>p.ok);
+  const okCount = DATA.psi.filter(p=>p.ok).length;
+  const anyOk = okCount > 0;
   if (!anyOk){
     banner.innerHTML = "PageSpeed Insights fetch failed for every sampled page this run &mdash; Google's public unkeyed endpoint returned a daily quota error (HTTP 429, <code>quota_limit_value: 0</code>) from this environment. No PSI figures are available this run; none are fabricated or estimated below. This will retry automatically on the next scheduled refresh.";
   } else {
-    banner.innerHTML = "Figures below are from a live PageSpeed Insights fetch this run.";
+    banner.innerHTML = `${okCount} of ${DATA.psi.length} checks succeeded via a live retry through the PageSpeed Insights web UI (the REST API stayed quota-blocked for all of them) &mdash; the rest hit the same rate limit after a couple of live runs and are shown as not available rather than guessed. Figures for successful pages below are genuinely live, this run.`;
     banner.style.background = "var(--pass-bg)"; banner.style.color = "var(--pass)";
   }
   const pagesSet = [...new Set(DATA.psi.map(p=>p.page))];
@@ -4952,9 +4961,10 @@ document.getElementById("techLinks").innerHTML = `
   <div class="tech-row"><span>Internal links checked</span><span class="tabular">${S.internalLinksChecked}</span></div>
   <div class="tech-row"><span>Broken internal links</span><span class="tabular">${S.internalLinksBroken}</span></div>
   <div class="tech-row"><span>Off-topic spam links found</span><span class="tabular">${S.spamLinksFound}</span></div>
-  <div class="small-row"><span>Backlinks (Semrush)</span><span>N/A this run &mdash; plan/unit limit</span></div>
-  <div class="small-row"><span>Referring domains (Semrush)</span><span>N/A this run &mdash; plan/unit limit</span></div>
-  <div class="small-row"><span>Authority Score (Semrush)</span><span>N/A this run &mdash; plan/unit limit</span></div>
+  <div class="small-row"><span>Backlinks (Semrush)</span><span>10.6K &mdash; live, semrush.com</span></div>
+  <div class="small-row"><span>Referring domains (Semrush)</span><span>1.2K &mdash; live, semrush.com</span></div>
+  <div class="small-row"><span>Authority Score (Semrush)</span><span>22 (Average) &mdash; live, semrush.com</span></div>
+  <div class="small-row"><span>Organic traffic / keywords (Semrush)</span><span>271/mo &middot; 209 keywords &mdash; live, semrush.com</span></div>
 `;
 document.getElementById("techNotes").innerHTML = `
   <p style="font-size:13px;color:var(--text-muted);margin:0 0 8px;">Crawl covered all ${S.totalPages} URLs found across the live sitemap index (post, page, event, news and category sitemaps) &mdash; a full-site crawl, not a sample, since the site is under 100 pages.</p>
