@@ -4975,7 +4975,8 @@ document.getElementById("techNotes").innerHTML = `
 `;
 
 /* ---------- Change log ---------- */
-const CHANGELOG = [];
+const CHANGELOG = []
+;
 document.getElementById("changelogList").innerHTML = CHANGELOG.length ? CHANGELOG.map(c=>`
   <div class="cl-entry"><div class="cl-date">${c.date}</div><div>${c.text}</div></div>
 `).join("") : `<div class="empty-note">No entries yet &mdash; this log starts tracking from the first audit cycle onward.</div>`;
